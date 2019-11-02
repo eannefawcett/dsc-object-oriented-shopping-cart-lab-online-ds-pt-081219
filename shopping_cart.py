@@ -45,6 +45,7 @@ class ShoppingCart:
             return 'Sorry, there is no discount to apply to your cart :('
 
     def void_last_item(self):
+        print(self.items)
         if self.items:
             removed_item = self.items.pop()
         else:
