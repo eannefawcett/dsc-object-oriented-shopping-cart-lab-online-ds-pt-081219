@@ -35,7 +35,6 @@ class ShoppingCart:
             median = (list_of_items[mid_1] + list_of_items[mid_2]) / 2
             return median
         mid = int(length/2)
-        print(self.items)
         return list_of_items[mid]
 
     def apply_discount(self):
@@ -43,8 +42,8 @@ class ShoppingCart:
             discount_total = self.total - (self.total * (self.employee_discount / 100))
             return discount_total
         else:
-            print(self.items)
-            return 'Sorry, there is no discount to apply to your cart :('
+            print('Sorry, there is no discount to apply to your cart :(')
+            return self.total
 
     def void_last_item(self):
         if self.items:
